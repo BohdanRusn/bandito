@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/bandito/static/css/main.9b88f525.css",
+    "main.css": "/bandito/static/css/main.b514398b.css",
     "main.js": "/bandito/static/js/main.37c8f656.js",
     "static/media/shoot.mp3": "/bandito/static/media/shoot.5f44cd487c8adf4fc30c.mp3",
     "index.html": "/bandito/index.html",
-    "main.9b88f525.css.map": "/bandito/static/css/main.9b88f525.css.map",
+    "main.b514398b.css.map": "/bandito/static/css/main.b514398b.css.map",
     "main.37c8f656.js.map": "/bandito/static/js/main.37c8f656.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b88f525.css",
+    "static/css/main.b514398b.css",
     "static/js/main.37c8f656.js"
   ]
 }
