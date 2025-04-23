@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bandito/static/css/main.9b88f525.css",
+    "main.js": "/bandito/static/js/main.92b95e30.js",
+    "static/media/shoot.mp3": "/bandito/static/media/shoot.5f44cd487c8adf4fc30c.mp3",
+    "index.html": "/bandito/index.html",
+    "main.9b88f525.css.map": "/bandito/static/css/main.9b88f525.css.map",
+    "main.92b95e30.js.map": "/bandito/static/js/main.92b95e30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b88f525.css",
+    "static/js/main.92b95e30.js"
+  ]
+}
