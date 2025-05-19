@@ -1,9 +1,11 @@
 {
   "name": "telegram-bobrito-game",
   "version": "0.1.0",
+  "homepage": "https://bohdanrusn.github.io/bandito",
   "private": true,
   "dependencies": {
     "@telegram-apps/sdk": "^3.8.0",
+    "@telegram-apps/sdk-react": "^3.2.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -14,6 +16,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

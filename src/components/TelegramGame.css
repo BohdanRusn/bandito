@@ -8,6 +8,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  box-sizing: border-box;
   padding: 1rem;
   background: linear-gradient(to bottom, #bfdbfe, #93c5fd);
   position: relative;

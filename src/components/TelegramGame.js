@@ -51,35 +51,32 @@ const TelegramGame = () => {
     // Start shooting animation
     setPlayerState("shooting");
 
+    // Deal damage to enemy immediately
+    const damage = Math.floor(Math.random() * 15) + 5; // Random damage between 5-20
+    const newHP = Math.max(0, enemyHP - damage);
+    setEnemyHP(newHP);
+
+    // Start enemy hurt animation simultaneously
+    setIsEnemyHurt(true);
+
     // Clear any existing timers
     if (shootTimerRef.current) clearTimeout(shootTimerRef.current);
+    if (damageTimerRef.current) clearTimeout(damageTimerRef.current);
 
-    // Reduced delay for more responsive gameplay
+    // Return player to idle state after animation
     shootTimerRef.current = setTimeout(() => {
-      // Deal damage to enemy
-      const damage = Math.floor(Math.random() * 15) + 5; // Random damage between 5-20
-      const newHP = Math.max(0, enemyHP - damage);
-      setEnemyHP(newHP);
-
-      // Start enemy hurt animation immediately
-      setIsEnemyHurt(true);
-
-      // Clear any existing damage timer
-      if (damageTimerRef.current) clearTimeout(damageTimerRef.current);
-
-      // Reduced hurt animation time
-      damageTimerRef.current = setTimeout(() => {
-        setIsEnemyHurt(false);
-
-        // Check if enemy is defeated
-        if (newHP <= 0) {
-          setGameOver(true);
-        }
-      }, 250);
-
-      // Return player to idle state
       setPlayerState("idle");
-    }, 250);
+    }, 500);
+
+    // End enemy hurt animation
+    damageTimerRef.current = setTimeout(() => {
+      setIsEnemyHurt(false);
+
+      // Check if enemy is defeated
+      if (newHP <= 0) {
+        setGameOver(true);
+      }
+    }, 500);
   };
 
   // Reset game
@@ -169,7 +166,7 @@ const TelegramGame = () => {
               />
             ) : (
               <img
-                src="/bobrito_shoot1.png"
+                src="bobrito_shoot1.png"
                 alt="Bobrito Shooting"
                 className="character-image"
               />
